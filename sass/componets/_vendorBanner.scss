@@ -1,0 +1,72 @@
+/* =============================================
+             Vendor Banner Css 
+==============================================*/
+.vendor_banner{
+    position: relative;
+    img{
+        border-radius: 5px;
+    }
+    .ovrly{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40%;
+        height: 100%;
+        padding: 40px;
+        text-align: left;
+        background: $text;
+        border-radius: 5px 0 0 5px;
+        img{
+            border-radius: 50%;
+        }
+        h1{
+            @include text(25px , 700 , #fff);
+            line-height: 1.8;
+        }
+        >p{
+            @include text(12px , 400 , #fff);
+            opacity: 80%;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.8;
+            i{
+                position: absolute;
+                left: 0;
+                top: 5px;
+            }
+        }
+        >a{
+            @include text(12px , 400 , #fff);
+            opacity: 80%;
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.8;
+            i{
+                position: absolute;
+                left: 0;
+                top: 5px;
+            }
+            &:hover{
+                color: $offer;
+            }
+        }
+        ul{
+            padding: 20px 0;
+            li{
+                a{
+                    width: 30px;
+                    height: 30px;
+                    background: tranparent;
+                    font-size: 15px;
+                    border-radius: 50%;
+                    border: 1px solid #fff;
+                    text-align: center;
+                    line-height: 30px;
+                    color: #fff;
+                    opacity: 80%;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

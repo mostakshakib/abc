@@ -1,0 +1,24 @@
+/* index */
+/*======================= BreadCrumb part start =========================*/
+#bread_crumb{
+    padding: 10px 0;
+    nav{
+        ol{
+            margin: 0;
+            li{
+                @include text(12px , 400 , #666 !important);
+                padding: 10px 0;
+                a{
+                    @include text(12px , 400 , #666 !important);
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+.pages_bread_crumb{
+    nav{
+        border-bottom: 1px solid #ccc;
+    }
+}
+/*======================= BreadCrumb part end =========================*/

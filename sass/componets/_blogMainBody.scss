@@ -1,0 +1,202 @@
+/* ========== Blog Body Css Start ========== */
+#blog_body {
+    padding: 10px 0;
+
+    .blog_body_left {
+        .blog_left_content {
+            padding: 10px 0 20px 0;
+            .bgl_img {
+                overflow: hidden;
+
+                img {
+                    border-radius: 5px;
+                    transition: transform .3s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .bgl_text {
+                a:first-child {
+                    @include text(12px, 400, $hover);
+                    line-height: 1.9;
+                }
+                a:nth-child(2) {
+                    display: block;
+                    @include text(16px, 600, $text);
+                    &:hover{
+                        color: $hover;
+                    }
+                }
+                p {
+                    @include text(12px, 400, #666);
+                    line-height: 1.9;
+                }
+                h6{
+                    @include text(12px, 400, #666);
+                    line-height: 1.9;
+                    b{
+                        color: #333;
+                        cursor: pointer;
+                        &:hover{
+                            color: $hover;
+                        }
+                    }
+                    span{
+                        color: #333;
+                        cursor: pointer;
+                        &:hover{
+                            color: $hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* blog body right */
+    .blog_body_right{
+        padding-top: 10px;
+        h2{
+            @include text(18px , 500 , #333);
+            padding-bottom: 10px;
+        }
+        .blog_search{
+            padding-bottom: 30px;
+            form{
+                position: relative;
+                input{
+                    width: 100%;
+                    padding: 10px;
+                    color: #666;
+                    border: 1px solid #eee;
+                    height: 40px;
+                    font-size: 10px;
+                    border-radius: 5px;
+                }
+                button{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 10px;
+                    background: transparent;
+                    border: none;
+                    color: #666;
+                    font-size: 12px;
+                }
+            }
+        }
+        .blog_categories{
+            padding-bottom: 30px;
+            ul{
+                li{
+                    a{
+                        @include text(16px , 400 , #666);
+                        line-height: 2.1;
+                        &:hover{
+                            color: $hover;
+                        }
+                    }
+                }
+            }
+        }
+        .blog_post{
+            padding-bottom: 30px;
+            .post_slider{
+                position: relative;
+                .row{
+                    padding-bottom: 10px;
+                    .post_text{
+                        a{
+                            @include text(12px , 400 , #666); 
+                            &:hover{
+                                color: $hover;
+                            }
+                        }
+                        h4{ 
+                            a{
+                                @include text(12px , 600 , #333);
+                                &:hover{
+                                    color: $hover;
+                                }
+                            }
+                        }
+                    }
+                }
+                .prev_post,
+                .next_post{
+                    position: absolute;
+                    top: -25px;
+                    font-size: 12px;
+                    color: #666;
+                    cursor: pointer;
+                }
+                .prev_post{
+                    right: 40px;
+                }
+                .next_post{
+                    right: 20px;
+                }
+            }
+        }
+        .blog_block{
+            padding-bottom: 30px;
+            p{
+                @include text(12px , 400 , #666);
+                line-height: 18px;
+            }
+        }
+        .blog_browse{
+            padding-bottom: 20px;
+            ul{
+                display: flex;
+                flex-wrap: wrap;
+                li{
+                    a{
+                        @include text(12px , 400 , #666);
+                        padding: 5px 10px;
+                        margin: 5px;
+                        border: 1px solid #ccc;
+                        background: transparent;
+                        @include transition();
+                        &:hover{
+                            border-color: $hover;
+                            color: $hover;
+                        }
+                    }
+                }
+            }
+        }
+        .blog_calender{
+            .pignose-calendar{
+                width: 100%;
+                .pignose-calendar-top{
+                    padding: 30px 0;
+                    .pignose-calendar-top-date{
+                        top: -10%;
+                        span{
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .pignose-calendar-header{
+                    .pignose-calendar-week{
+                        font-size: 10px;
+                    }
+                }
+                .pignose-calendar-body{
+                    padding: 10px;
+                    .pignose-calendar-unit{
+                        height: 2.5em;
+                        a{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ========== Blog Body Css end ========== */

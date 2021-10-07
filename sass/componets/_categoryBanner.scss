@@ -1,0 +1,117 @@
+/* index */
+/* ========== Category Banner Css Start ========== */
+#category_banner{
+    padding: 30px 0;
+    .category_banner_img{
+        position: relative;
+        .ovrly{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            padding: 30px;  
+        }
+    }
+    .category_banner_img_one,
+    .category_banner_img_two{
+        .ovrly{
+            h4{
+                @include text(20px , 400 , #333);
+                span{
+                    @include text(20px , 700 , #f77c29 );
+                }
+            }
+            h2{
+                @include text(25px , 800 , #333);
+                text-transform: uppercase;
+            }
+            h3{
+                @include text(25px , 400 , #333);
+            }
+            p{
+                @include text(14px , 400 , #666);
+                padding-top: 15px;
+                span{
+                    color: #f77c29;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .category_banner_img_two{
+        .ovrly{
+            h4{
+                color: #c4c4c5;
+            }
+            h2{
+                color: #fff;
+            }
+            h3{
+                color: #fff;
+            }
+            p{
+                color: #fff;
+            }
+        }
+    }
+    .category_banner_img_four,
+    .category_banner_img_three{
+        .ovrly{
+            p{
+                @include text(15px, 700, #eee);
+                text-transform: uppercase;
+                padding-bottom: 5px;
+            }
+            h6{
+                @include text(23px, 700, #fff);
+                line-height: 1.1;
+                padding-bottom: 20px;
+            }
+            a{
+                @include text(15px, 500, #fff);
+                position: relative;
+                &::after{
+                    @include af_bf();
+                    left: 0;
+                    bottom: -5px;
+                    width: 100%;
+                    height: 3px;
+                    background: #fff;
+                    transform-origin: center;
+                    transform: scale(0, 1);
+                    transition: transform 0.4s ease;
+                }
+                i{
+                    padding-left: 5px;
+                    @include transition();
+                }
+                &:hover{
+                    &::after{
+                        transform-origin: center;
+                        transform: scale(1, 1);
+                    }
+                    i{
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .category_banner_img_three{
+        .ovrly{
+            p{
+                color: #333;
+            }
+            h6{
+                color: #333;
+            }
+            a{
+                color: #333;
+                &::after{
+                    background:#333;;
+                }
+            }
+        }
+    }
+}
+/* ========== Category Banner Css End ========== */

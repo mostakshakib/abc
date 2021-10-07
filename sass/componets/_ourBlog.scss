@@ -1,0 +1,61 @@
+/* ================ Our Blog Css Start ===================== */
+#our_blog{
+    padding: 20px 0;
+    .our_blog_content{
+        .our_blog_img{
+            overflow: hidden;
+            img{
+                transition: transform .2s;
+            }
+        }
+        .our_blog_text{
+            padding: 10px 0;
+            span{
+                @include text(12px, 400, #666);
+                a{
+                    @include text(14px, 600, #333);
+                    padding: 0 3px;
+                    &:hover{
+                        color: $hover;
+                    }
+                }
+            }
+            a.blog_name{
+                display: block;
+                @include text(13px, 600, #333);
+                &:hover{
+                    color: $hover;
+                }
+            }
+            a.blog_rm{
+                @include text(13px, 400, #333);
+                position: relative;
+                &::after{
+                    @include af_bf();
+                    left: 0;
+                    bottom: -3px;
+                    width: 100%;
+                    height: 3px;
+                    transform-origin: center;
+                    transform: scale(0,1);
+                    background: #333;
+                    transition: ease .3s;
+                }
+                &:hover{
+                    &::after{
+                        transform-origin: center;
+                        transform: scale(1,1);
+                    }
+                }
+            }
+        }
+        &:hover{
+            .our_blog_img{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+/* ================ Our Blog Css End ===================== */

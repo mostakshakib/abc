@@ -1,0 +1,28 @@
+@mixin transition() {
+    transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+}
+
+@mixin c_bg() {
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+@mixin bg_ovrly() {
+    position: relative;
+    z-index: 1;
+}
+
+@mixin af_bf() {
+    position: absolute;
+    content: '';
+}
+@mixin text($fs , $fw , $c) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+}

@@ -1,0 +1,37 @@
+/* index */
+/* ========== Shop Category Css Start ========== */
+#shop_category {
+    padding: 20px 0;
+
+    .shop_category_slider {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+        .shop_category_item {
+            padding: 10px 0;
+            margin: 0 12px;
+
+            img {
+                border-radius: 50%;
+                overflow: hidden;
+                transition: transform .3s;
+            }
+
+            a {
+                margin-top: 10px;
+                @include text(16px, 700, #333);
+                @include transition();
+            }
+
+            &:hover {
+                img {
+                    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+                    transform: scale(1.1);
+                }
+                a{
+                    color: $hover;
+                }
+            }
+        }
+    }
+}
+/* ========== Shop Category Css End ========== */

@@ -1,0 +1,108 @@
+/*======================= PopUP part start =========================*/
+.pop_up {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: rgba(51, 51, 51, 0.5);
+
+    .pop_up_content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        .pop_up_img {
+            position: relative;
+
+            img {
+                border-radius: 25px;
+            }
+
+            .pop_close {
+                position: absolute;
+                top: -30px;
+                right: 5px;
+                font-size: 25px;
+                color: #fff;
+                cursor: pointer;
+                z-index: 9999999;
+                &:hover{
+                    transform: scale(1.3);
+                }
+            }
+            .ovrly{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 50%;
+                height: 100%;
+                background: transparent;
+                padding: 60px 30px;
+                text-align: left;
+                h3{
+                    @include text(25px, 300, #333);
+                    span{
+                        font-weight: 600;
+                        color: $hover;
+                    }
+                }
+                h2{
+                    @include text(30px, 700, #333);
+                    text-transform: uppercase;
+                    padding: 5px 0;
+                }
+                p{
+                    @include text(14px, 400, #666);
+                    padding: 5px 0;
+                }
+                form{
+                    position: relative;
+                    margin: 20px 0;
+                    input{
+                        width: 60%;
+                        height: 40px;
+                        border: 1px solid #eee;
+                        @include text(14px, 400, #666);
+                        padding-left: 15px;
+                        color: #666;
+                        border-radius: 25px 0 0 25px;
+                    }
+                    button{
+                        position: absolute;
+                        top: 0;
+                        right: 35px;
+                        width: 30%;
+                        height: 40px;
+                        border: 1px solid #333;
+                        background: #333;
+                        @include text(15px, 500, #fff);
+                        text-transform: uppercase;
+                        line-height: 38px;
+                        border-radius: 0 25px 25px 0;
+                    }
+                }
+                .pop_check_box{
+                    input{
+                        border-color: #ccc;
+                        &:focus{
+                            box-shadow: none;
+                            border-color: #ccc;
+                        }
+                        &:checked{
+                            background-color: #333;
+                            border-color: #333;
+                        }
+                    }
+                    label{
+                        @include text(14px, 400, #666);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*======================= PopUP part End =========================*/

@@ -1,0 +1,54 @@
+/* =================== Award css Start ==================== */
+#award{
+    background: #fafafb;
+    padding: 100px 0;
+    .award_top{
+        .award_top_img{
+            img{
+                border-radius: 25px;
+            }
+        }
+        .award_top_text{
+            padding: 0 20px;
+            h2{
+                @include text(30px,700,#333);
+            }
+            p{
+                @include text(14px,400,#666);
+                line-height: 1.86;
+                padding: 25px 0;
+            }
+            a{
+                padding: 15px 20px;
+                background: #333;
+                text-transform: uppercase;
+                @include text(14px,600,#fff);
+                border-radius: 5px;
+                opacity: 0.8;
+                transition: ease .3s;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .award_btm{
+        padding-top: 100px;
+        .award_header{
+            padding-bottom: 40px;
+            h2{
+                @include text(25px,700,#333); 
+            }
+        }
+        .award_content{
+            p{
+                @include text(18px,600,#333);
+                padding-top: 20px;
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+/* =================== Award css End ==================== */

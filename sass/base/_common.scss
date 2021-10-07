@@ -1,0 +1,92 @@
+/* ==================  Font Part Start  ================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ==================  Common Part Start  ================== */
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.common_header {
+    text-align: center;
+    padding-bottom: 20px;
+
+    h4 {
+        @include text(20px, 600, #333);
+        text-transform: capitalize;
+    }
+}
+
+.review {
+    a {
+        color: $offer;
+    }
+
+    a:nth-child(5) {
+        color: #ccc;
+    }
+
+    a:last-child {
+        color: #666;
+        font-size: 13px;
+    }
+}
+
+.common_header {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+
+    h6 {
+        @include text(18px, 700, #333);
+    }
+
+    a {
+        @include text(14px, 600, #333);
+        i {
+            padding-top: 7px;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+    }
+}
+
+/* ==================  Common Part End  ================== */

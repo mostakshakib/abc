@@ -1,0 +1,49 @@
+/* ========== Subscribe Css Start ========== */
+#subs{
+    padding: 20px 0;
+    background: $hover;
+    .subs_content{
+        .subs_icon{
+            margin-right: 15px;
+            i{
+                display: block;
+                color: #fff;
+                font-size: 45px;
+            }
+        }
+        .subs_text{
+            align-self: center;
+            h5{
+                @include text(14px , 700 , #fff);
+            }
+            p{
+                @include text(14px , 400 , #fff);
+            }
+        }
+    }
+    .subs_form{
+        form{
+            input{
+                width: 450px;
+                padding: 10px;
+                color: #666;
+                border: none;
+                border-radius: 5px;
+                line-height: 20px;
+            }
+            button{
+                width: 140px;
+                height: 45px;
+                border: none;
+                background: #333;
+                text-align: center;
+                line-height: 45px;
+                @include text(16px , 500 , #fff);
+                i{
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+/* ========== Subscribe Css End ========== */

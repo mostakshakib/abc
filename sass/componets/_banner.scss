@@ -1,0 +1,183 @@
+/* index */
+/* ========== Banner Css Start ========== */
+#banner {
+    .banner_slider {
+        position: relative;
+
+        .banner_item {
+            padding: 50px 0 80px 0;
+            height: 570px;
+            @include c_bg();
+
+            .banner_text {
+                >h2 {
+                    @include text(35px, 500, #666);
+                    padding-bottom: 5px;
+
+                    span {
+                        position: relative;
+
+                        &::after {
+                            @include af_bf();
+                            left: 0;
+                            bottom: 7px;
+                            width: 100%;
+                            height: 3px;
+                            background: #f77c29;
+                        }
+                    }
+                }
+
+                >h1 {
+                    @include text(44px, 700, $text);
+                    text-transform: uppercase;
+                    padding-bottom: 15px;
+                }
+
+                >p {
+                    @include text(20px, 400, #666);
+                    padding-bottom: 20px;
+
+                    span {
+                        color: #f77c29;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+
+                a {
+                    padding: 15px 55px 15px 35px;
+                    background: transparent;
+                    @include text(16px, 600, $text);
+                    border: 2px solid $text;
+                    position: relative;
+                    text-align: center;
+                    @include transition();
+
+                    i {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 30px;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                        background: $text;
+                    }
+                }
+            }
+
+            .slide_two_banner_text {
+                >h2 {
+                    @include text(30px, 500, #666);
+
+                    span {
+                        color: #f77c29;
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+
+                >h1 {
+                    @include text(34px, 700, $text);
+                }
+
+                >p {
+                    @include text(23px, 400, #666);
+                }
+            }
+
+            .slide_three_banner_text {
+                >h2 {
+                    @include text(25px, 400, #666);
+                }
+
+                >h1 {
+                    @include text(37px, 500, #666);
+                    text-transform: capitalize
+                }
+
+                >p {
+                    @include text(44px, 700, $text);
+                    position: relative;
+                    display: inline;
+
+                    span {
+                        width: 165px;
+                        height: 45px;
+                        line-height: 45px;
+                        text-align: center;
+                        background: #f77c29;
+                        color: #fff;
+                        transform: skew(35deg);
+                    }
+
+                    &::after {
+                        @include af_bf();
+                        left: 0;
+                        bottom: 20px;
+                        width: 100%;
+                        height: 3px;
+                        background: #f77c29;
+                    }
+                }
+
+                a {
+                    margin-top: 20px;
+                }
+            }
+        }
+
+        .banner_item_slider_two {
+            padding-top: 0;
+        }
+
+        .slick-dots {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 70px;
+            width: auto;
+            display: flex;
+
+            li {
+                padding: 0 3px;
+
+                button {
+                    width: 12px;
+                    height: 12px;
+                    background: #666;
+                    border: none;
+                    border-radius: 50%;
+                    font-size: 0;
+                }
+            }
+
+            li.slick-active {
+                button {
+                    position: relative;
+                    width: 12px;
+                    height: 12px;
+                    background: $hover;
+                    border-radius: 50%;
+                    font-size: 0;
+
+                    &::after {
+                        @include af_bf();
+                        top: -2px;
+                        left: -2px;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        border: 1px solid #eee;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ========== Banner Css End ========== */

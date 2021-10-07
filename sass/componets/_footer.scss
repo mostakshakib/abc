@@ -1,0 +1,151 @@
+/* ===================== Footer Css Start========================*/
+#footer {
+    padding: 20px 0;
+
+    /* footer top css */
+    .footer_top {
+        padding: 45px 0;
+        border-bottom: 1px solid #f1f1f1;
+
+        .footer_cntct {
+            img {
+                width: 140px;
+                margin-bottom: 15px
+            }
+
+            h5 {
+                @include text(12px, 600, $text);
+                line-height: 3;
+            }
+
+            >a {
+                @include text(18px, 600, $text);
+
+                &:hover {
+                    color: $hover
+                }
+            }
+
+            p {
+                @include text(12px, 400, #666);
+                line-height: 2.5;
+            }
+
+            >ul {
+                padding-top: 25px;
+
+                >li {
+                    >a {
+                        width: 25px;
+                        height: 25px;
+                        background: transparent;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 25px;
+                        font-size: 14PX;
+                        color: #fff;
+                        margin-right: 5px;  
+                    }
+                    &:nth-child(1) {
+                        a {
+                            background: $hover;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        a {
+                            background: #00adef;
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        a {
+                            background: #f96a02;
+                        }
+                    }
+
+                    &:nth-child(4) {
+                        a {
+                            background: #2c567e;
+                        }
+                    }
+
+                    &:nth-child(5) {
+                        a {
+                            background: #cc0001;
+                        }
+                    }
+                }
+            }
+        }
+        .footer_top_menu{
+            h2{
+                @include text(16px, 600, $text);
+                padding-bottom: 5px
+            }
+            >ul{
+                >li{
+                    >a{
+                        @include text(14px, 400, #666);
+                        line-height: 2.5;
+                        &:hover {
+                            color: $hover
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* footer mid css */
+    .footer_middle{
+        padding: 30px 0;
+        border-bottom: 1px solid #f1f1f1;
+        .footer_main_menu{
+            line-height: 2.5;
+            >ul{
+                >li{
+                    h4{
+                        display: inline-block;
+                        @include text(14px , 600 , #666);
+                        padding-right: 15px
+                    }
+                    >a{
+                        @include text(14px , 400 , #666);
+                        margin: 0 10px;
+                        position: relative;
+                        &::after{
+                            @include af_bf();
+                            width: 1px;
+                            height: 10px;
+                            background: #666;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: -10px;
+                        }
+                        &:hover{
+                            color: $hover;
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            &::after{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* footer btm css */
+    .footer_bottom{
+        line-height: 2.5;
+        p{
+            @include text(12px , 400 , #666);
+            display: inline-block;
+            padding-right: 10px;
+        }
+    }
+}
+
+/* ===================== Footer Css End========================*/

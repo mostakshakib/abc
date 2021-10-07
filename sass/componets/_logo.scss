@@ -1,0 +1,296 @@
+/* index */
+/*======================= Logo part Start =========================*/
+#logo {
+    padding: 30px 0;
+    border-bottom: 1px solid #f1f1f1;
+
+    .logo {
+        img {
+            width: 145px;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .logo_search {
+
+        .gap {
+            background: #ccc;
+            width: 1px;
+            height: 35px;
+            margin-top: 3px;
+            margin-left: 3px;
+        }
+
+        form {
+            border: 2px solid #336699;
+            position: relative;
+
+            select {
+                background: transparent;
+                border: 0;
+                padding: 10px;
+                @include text(14px, 400, $text);
+                display: block;
+            }
+
+            input {
+                height: 100%;
+                width: 415px;
+                padding: 10px 10px 10px 15px;
+                border: none;
+                @include text(14px, 400, $text)
+            }
+
+            button {
+                background: transparent;
+                border: 0;
+                font-size: 16px;
+                color: #ccc;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                padding-right: 5px;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                -moz-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                -o-transform: translateY(-50%);
+            }
+        }
+    }
+
+    .logo_right {
+        >a {
+            margin-right: 20px;
+            text-align: center;
+
+            i {
+                font-size: 25px;
+                color: $text;
+                @include transition();
+            }
+
+            p {
+                @include text(12px, 400, $text);
+                @include transition();
+            }
+
+            &:first-child {
+                position: relative;
+                margin-right: 20px;
+
+                &::after {
+                    @include af_bf();
+                    top: 0;
+                    right: -8px;
+                    height: 45px;
+                    width: 1px;
+                    background: #ccc;
+                }
+
+                h5 {
+                    text-align: left;
+                    @include text(14px, 400, $text);
+
+                    span {
+                        color: #999;
+                    }
+                }
+
+                p {
+                    @include text(17px, 700, #666);
+                    text-align: left;
+                }
+
+                i {
+                    position: absolute;
+                    left: -40px;
+                    top: 8px;
+                    font-size: 30px;
+                }
+            }
+
+            &:nth-child(4) {
+                margin-right: 0;
+                position: relative;
+
+                span {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height: 20px;
+                    top: -5px;
+                    right: 0;
+                    @include text(12px, 400, #fff);
+                    background: #336699;
+                }
+            }
+
+            &:hover {
+                i {
+                    color: $hover;
+                }
+
+                p {
+                    color: $hover;
+                }
+            }
+        }
+
+        .shop_chart {
+            padding: 15px 30px;
+
+            .shop_header {
+                border-bottom: 1px solid #ccc;
+                button{
+                    background: none;
+                    width: auto;
+                    height: auto;
+                    font-size: 18px;
+                    position: relative;
+                    i{
+                        position: absolute;
+                        top: 50%;
+                        right: -15px;
+                        transform: translateY(-50%);
+                        font-size: 20px;
+                    }
+                }
+                h5 {
+                    @include text(18px, 700, $text);
+                }
+            }
+
+            .shop_body {
+                flex-grow: 0;
+                border-bottom: 1px solid #ccc;
+
+                .shop_card {
+                    margin-bottom: 25px;
+
+                    .card_left {
+                        width: 50%;
+                        text-align: left;
+
+                        .product-name {
+                            @include text(16px, 500, #000);
+                            @include transition();
+                            &:after {
+                                display: none !important;
+                            }
+                            &:hover{
+                                color: $hover;
+                            }
+                        }
+
+                        p {
+                            color: #666;
+                            font-size: 16px;
+                            padding-top: 20px;
+
+                            i {
+                                color: #666;
+                                font-size: 12px;
+                            }
+
+                            span {
+                                color: $hover;
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .card_right {
+                        width: 50%;
+                        text-align: right;
+                        position: relative;
+
+                        a {
+                            &:after {
+                                display: none !important;
+                            }
+                        }
+
+                        .shop_img_close {
+                            position: absolute;
+                            top: -10px;
+                            right: -15px;
+                            width: 20px;
+                            height: 20px;
+                            background: #fff;
+                            line-height: 10px;
+                            text-align: center;
+                            border: 2px solid #000;
+                            border-radius: 50%;
+                            @include transition();
+                            i {
+                                color: #000;
+                                font-size: 13px;
+                                @include transition();
+                            }
+                            &:hover{
+                                background: #333;
+                                border-color: #333;
+                                i{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .shop_footer {
+                .total_cost {
+                    padding-top: 20px;
+                    p {
+                        @include text(16px, 400, #333);
+
+                        &:last-child {
+                            @include text(16px, 600, #333);
+                        }
+                    }
+                }
+
+                .shop_action {
+                    padding-top: 20px;
+                    button {
+                        width: 50%;
+                        margin-right: 20px;
+                        background: transparent;
+                        border: 2px solid #333;
+                        @include text(16px, 600, #333);
+                        border-radius: 0;
+                        padding: 8px 10px;
+                        @include transition();
+
+                        &:hover {
+                            border-color: $hover;
+                            background: $hover;
+                            color: #fff;
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                            border-color: $hover;
+                            background: $hover;
+                            color: #fff;
+
+                            &:hover {
+                                color: #fff;
+                                border-color: #3c78b4;
+                                background-color: #3c78b4;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*======================= Logo part end =========================*/

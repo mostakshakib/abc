@@ -1,0 +1,315 @@
+/* ==================== Product Wrap css Start ======================== */
+#product_wrap {
+    padding: 30px 0 50px 0;
+    /* Wrap Main Css */
+    .product_wrap_part {
+        .wrap_common_head {
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+
+            h6 {
+                @include text(18px, 700, #333);
+            }
+
+            a {
+                @include text(16px, 600, #333);
+
+                i {
+                    padding-top: 7px;
+                }
+
+                &:hover {
+                    color: $hover;
+                }
+            }
+        }
+
+        .wrap_banner {
+            position: relative;
+
+            .ovrly {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                padding: 30px;
+                text-align: left;
+
+                p {
+                    @include text(16px, 400, #333);
+                    position: relative;
+
+                    &:after {
+                        @include af_bf();
+                        left: 0;
+                        bottom: -10px;
+                        width: 20%;
+                        height: 3px;
+                        background: #333;
+                    }
+                }
+
+                h2 {
+                    @include text(25px, 700, #333);
+                    text-transform: uppercase;
+                    padding: 20px 0;
+
+                    span {
+                        display: block;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                }
+
+                a {
+                    padding: 5px 13px;
+                    text-align: center;
+                    border: 1px solid #333;
+                    border-radius: 3px;
+                    @include text(14px, 600, #333);
+                    @include transition();
+
+                    &:hover {
+                        background: #333;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .wrap_item_row {
+            padding: 15px 0;
+
+            .wrap_content {
+                .wrap_item {
+                    padding-bottom: 20px;
+
+                    .wrap-item_img {
+                        position: relative;
+
+                        img.wrap_item_hover_img {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        .ovrly {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            opacity: 0;
+                            @include transition();
+
+                            >ul {
+                                >li {
+                                    >a {
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 50%;
+                                        background: #fff;
+                                        color: #666;
+                                        text-align: center;
+                                        line-height: 30px;
+                                        font-size: 12px;
+                                        margin-bottom: 3px;
+                                        @include transition();
+
+                                        &:hover {
+                                            background-color: $hover;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        span {
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            width: 50px;
+                            height: 25px;
+                            text-align: center;
+                            line-height: 25px;
+                            background: $offer;
+                            color: #fff;
+                            border-radius: 5px;
+                            font-size: 10px;
+                            font-weight: 600;
+                        }
+
+                        &:hover {
+                            img.wrap_item_hover_img {
+                                display: block;
+                            }
+
+                            .ovrly {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .wrap-item_text {
+                        >a {
+                            @include text(12px, 500, #333);
+                            padding-top: 10px;
+
+                            &:hover {
+                                color: $hover;
+                            }
+                        }
+
+                        .review {
+                            a {
+                                color: $offer;
+                                font-size: 13px;
+                            }
+
+                            a:nth-child(4) {
+                                color: #ccc;
+                            }
+
+                            a:nth-child(5) {
+                                color: #ccc;
+                            }
+
+                            a:last-child {
+                                color: #666;
+                                font-size: 13px;
+
+                                &:hover {
+                                    color: $hover;
+                                }
+                            }
+                        }
+
+                        p {
+                            @include text(15px, 600, #333);
+
+                            del {
+                                font-size: 13px;
+                                color: #666;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* wrap two */
+    .wrap_two {
+        .wrap_banner {
+            .ovrly {
+                p {
+                    color: #fff;
+
+                    &:after {
+                        background: #fff;
+                    }
+                }
+
+                h2 {
+                    color: #fff;
+                    ;
+
+                    span {
+                        display: block;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                    }
+                }
+
+                a {
+                    border-color: #fff;
+                    color: #fff;
+
+                    &:hover {
+                        background: #fff;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+
+    /* wrap banner */
+    .product_wrap_banner {
+        @include c_bg();
+        padding: 30px 60px;
+
+        .wrap_banner_content {
+            h2 {
+                @include text(60px, 700, $offer);
+                position: relative;
+                display: inline-block;
+
+                b {
+                    position: absolute;
+                    top: 10px;
+                    right: -35px;
+                    font-size: 35px;
+                }
+
+                span {
+                    position: absolute;
+                    bottom: 10px;
+                    right: -35px;
+                    font-size: 15px;
+                    text-transform: uppercase;
+                }
+                &::after{
+                    @include af_bf();
+                    height: 100%;
+                    width: 1px;
+                    background: #fff;
+                    opacity: 30%;
+                    top: 0;
+                    right: -80px;
+                }
+            }
+            h4{
+                @include text(30px, 700, #fff);
+                text-transform: uppercase;
+            }
+            p{
+                @include text(16px, 500, #fff);
+                padding-top: 10px;
+                span{
+                    padding: 2px 3px;
+                    background: #fff;
+                    color: #333;
+                    font-weight: 700;
+                    b{
+                        font-weight: 900;
+                        padding-left: 3px;
+                    }
+                }
+            }
+            a {
+                padding: 7px 20px;
+                text-align: center;
+                border: 1px solid #fff;
+                border-radius: 3px;
+                text-transform: uppercase;
+                @include text(14px, 600, #fff);
+                @include transition();
+
+                &:hover {
+                    background: #fff;
+                    color: #333;
+                }
+            }
+        }
+    }
+    /* wrap three */
+    .wrap_three{
+        padding-top: 20px;
+    }
+}
+
+/* ==================== Product Wrap css End ======================== */

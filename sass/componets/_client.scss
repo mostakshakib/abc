@@ -1,0 +1,25 @@
+/* ================ Client css Start ================== */
+#client{
+    padding: 20px 0;
+    .client_head{
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+
+            h6 {
+                @include text(18px, 700, #333);
+            }
+    }
+    .client_logo{
+        ul{
+            flex-wrap: wrap;
+            .client_img{
+                width: 16.66%;
+                border: 1px solid #eee;
+                text-align: center;
+                background: #fff;
+            }
+        }
+    }
+}
+/* ================ Client css End ================== */

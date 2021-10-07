@@ -1,0 +1,366 @@
+/* index */
+/* ========== Header Css Start ========== */
+#main_header {
+    background: #f5f6f8;
+    text-transform: capitalize;
+    padding: 14px 0;
+    font-family: $pop;
+
+    .header_left {
+        p {
+            @include text(12px, 400, $text)
+        }
+    }
+
+    .header_right {
+
+        .currancy,
+        .language{
+            ul {
+                li {
+                    padding: 0 10px;
+                    position: relative;
+                    img{
+                        margin-right: 5px;
+                    }
+                    a {
+                        @include text(12px, 400, $text);
+                        @include transition;
+
+                        &:hover {
+                            color: $hover
+                        }
+
+                        i {
+                            font-size: 8px;
+                            margin-left: 6px;
+                        }
+                    }                    
+                    ul {
+                        position: absolute;
+                        top: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: #fff;
+                        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
+                        display: none;
+                        z-index: 99;
+
+                        li {
+                            padding: 0;
+                            img{
+                                margin-right: 0
+                            }
+                            a {
+                                @include text(12px, 400, $text);
+                                padding: 5px 10px;
+                                @include transition;
+
+                                &:hover {
+                                    color: $hover
+                                }
+                            }
+                        }
+
+                        &::after {
+                            @include af_bf();
+                            top: -20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-top: 10px solid transparent;
+                            border-left: 10px solid transparent;
+                            border-right: 10px solid transparent;
+                            border-bottom: 10px solid #fff;
+                        }
+                    }
+                    &:hover {
+                        ul {
+                            display: inline-block;
+                            box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .language {
+            padding-right: 10px;
+            ul {
+                li {              
+                    ul {
+                        width: 76px;
+                        li{
+                            padding-left: 10px; 
+                        }
+                    }
+                }
+            }
+        }
+
+        .gap {
+            width: 1px;
+            height: 24px;
+            background: #ccc;
+        }
+
+        .header_mennu {
+            ul {
+                li {
+                    padding: 0 20px;
+
+                    &:first-child {
+                        padding-right: 0;
+                    }
+
+                    &:last-child {
+                        padding-left: 0;
+                    }
+
+                    a {
+                        @include text(12px, 400, $text);
+                        @include transition;
+
+                        &:hover {
+                            color: $hover
+                        }
+                    }
+                }
+            }
+        }
+
+        .account {
+            ul {
+                li {
+                    i {
+                        margin-right: 10px;
+                        font-size: 20px;
+                        color: $text
+                    }
+
+                    a {
+                        @include text(12px, 400, $text);
+                        @include transition;
+
+                        &:hover {
+                            color: $hover
+                        }
+                    }
+
+                    span {
+                        @include text(16px, 400, $text);
+                        padding: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-modal-content {
+    padding: 50px 50px 30px 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    top: 125px;
+    transform: translateX(-50%);
+    .btn-close{
+        position: absolute;
+        top: -28px;
+        right: 5px;
+        color: #ccc;
+        @include transition();
+        &:focus{
+            box-shadow: none;
+        }
+        &:hover{
+            transform: rotateZ(180deg) scale(1.5);
+        }
+    }
+
+    .header-modal-header {
+        ul {
+            li {
+                width: 48.74%;
+                margin-right: 10px;
+                text-align: center;
+
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                .active {
+                    background: transparent;
+                    color: $hover;
+                    position: relative;
+
+                    &::after {
+                        @include af_bf();
+                        bottom: -2px;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        background: $hover;
+                        z-index: 999;
+                    }
+                }
+
+                button {
+                    width: 100%;
+                    padding-top: 0;
+                    @include text(16px, 700, #666);
+                    font-family: 'Poppins', sans-serif;
+                    border-radius: 0;
+                    border-bottom: 1px solid #ccc;
+                    @include transition();
+                    position: relative;
+
+                    &::after {
+                        @include af_bf();
+                        bottom: -2px;
+                        left: 0;
+                        width: 0;
+                        height: 3px;
+                        background: $hover;
+                        z-index: 999;
+                        @include transition();
+                    }
+
+                    &:hover {
+                        color: $hover;
+
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header-modal-body {
+        label {
+            color: #666;
+        }
+
+        input {
+            border-radius: 0;
+
+            &:focus {
+                box-shadow: none;
+                border-color: #ccc;
+            }
+
+            &:checked {
+                border-color: #000;
+                background-color: #000;
+            }
+        }
+
+        .lost_pass {
+            margin-left: 90px;
+            color: #a94442;
+            @include transition();
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        button {
+            width: 100%;
+            color: #fff;
+            border-color: #336699;
+            background-color: #336699;
+            display: block;
+            border-radius: 0;
+            font-weight: 600;
+            @include transition();
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:hover {
+                border-color: #3c78b4;
+                background-color: #3c78b4;
+            }
+        }
+        .form_two_p{
+            @include text(12px, 400, #666);
+            line-height: 24px;
+            padding-bottom: 20px;
+        }
+        .vendor{
+            color: #336699;
+            margin-bottom: 20px;
+            @include transition();
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .privacy_policy{
+            color: #336699;
+            @include transition();
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .header-modal-footer {
+        p {
+            text-align: center;
+            @include text(16px, 400, #666);
+            margin: 20px 0;
+        }
+
+        ul {
+            li {
+                a {
+                    width: 32px;
+                    height: 32px;
+                    line-height: 28px;
+                    border: 2px solid #ccc;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: #ccc;
+                    margin: 0 5px;
+                }
+
+                .moadl_f {
+                    color: #1b4f9b;
+                    border-color: #1b4f9b;
+                    @include transition();
+                    &:hover{
+                        background-color: #1b4f9b;
+                        color: #fff;
+                    }
+                }
+
+                .moadl_t {
+                    color: #00adef;
+                    border-color: #00adef;
+                    @include transition();
+                    &:hover{
+                        background-color: #00adef;
+                        color: #fff;
+                    }
+                    
+                }
+
+                .moadl_i {
+                    border-color: #dd4b39;
+                    color: #dd4b39;
+                    @include transition();
+                    &:hover{
+                        background-color: #dd4b39;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ========== Header Css End ========== */

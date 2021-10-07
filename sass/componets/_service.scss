@@ -1,0 +1,31 @@
+/* index */
+/* ========== Service Css Start ========== */
+#service{
+    padding-top: 30px;
+    .service_cont{
+        border: 2px solid #eee;
+        .service_row{
+            padding: 25px 20px;
+            justify-content: center;
+            .service_item{
+                .service_icon{
+                    i{
+                        font-size: 33px;
+                        color: $hover;
+                        padding-left: 10px;
+                    }
+                }
+                .service_text{
+                    padding-left: 20px;
+                    h4{
+                        @include text(14px , 600 , $text);
+                    }
+                    p{
+                        @include text(14px , 400 , #666);
+                    }
+                }
+            }
+        
+    }}
+}
+/* ========== Service Css End ========== */

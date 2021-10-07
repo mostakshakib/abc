@@ -1,0 +1,128 @@
+/* ==================== Marketing Css Start =========================*/
+#marketing{
+    padding: 90px 0;
+    /* Market Header */
+    .market_header_part{
+        .market_header{
+            text-align: center;
+            h2{
+                @include text(35px, 700, #333);
+                padding-bottom: 20px;
+                span{
+                    display: block;
+                }
+            }
+            p{
+                @include text(14px, 400, #666);
+                line-height: 1.86;
+                span{
+                    display: block;
+                }
+            }
+        }
+    }
+    /* Market Banner */
+    .market_banner_part{
+        .market_banner{
+            padding: 40px 0;
+            img{
+                border-radius: 10px;
+            }
+        }
+    }
+    /* Market Service */
+    .market_service_part{
+        .market_service{
+            .ms_header{
+                h3{
+                    @include text(30px, 700, #333);
+                }
+            }
+            .market_collapse{
+                padding: 5px 0;
+                .market_collapse_button{
+                    a{
+                        @include text(18px, 600, $hover);
+                        background: transparent;
+                        border: none;
+                        display: block;
+                        border-bottom: 1px solid transparent;
+                        text-align: left;
+                        padding-left: 15px;
+                        position: relative;
+                        &:focus{
+                            box-shadow: none;
+                        }
+                        &::after{
+                            @include af_bf();
+                            background: #333;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 20px;
+                            width: 1px;
+                            height: 10px;
+                            transition: transform .3s;
+                        }
+                        &::before{
+                            @include af_bf();
+                            background: #333;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            right: 15px;
+                            width: 11px;
+                            height: 1px;
+                            display: none;
+                            transition: transform .3s;
+                        }
+                        &.collapsed{
+                            color: #333 !important;
+                            border-bottom: 1px solid #eee;
+                            &::after{
+                                transform: translateY(-50%) rotate(180deg);
+                            }
+                            &::before{
+                                display: block;
+                                transform: translateY(-50%) rotate(180deg);
+                            }
+                        }
+                    }
+                }
+                .market_collapse_content{
+                    p{
+                        @include text(12px, 400, #666);
+                        line-height: 1.86;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+        }
+        .market_service_img{
+            img{
+                border-radius: 10px;
+            }
+        }
+    }
+    
+    /* Market Counter */
+    .market_counter_part{
+        padding-top: 60px;
+        .market_counterup_content{
+            text-align: center;
+            h4{
+                @include text(55px, 700, #ccc);
+            }
+            h5{
+                @include text(16px, 700, #333);
+                padding: 10px 0;
+            }
+            p{
+                @include text(14px, 400, #666);
+                line-height: 1.8;
+                span{
+                    display: block;
+                }
+            }
+        }
+    } 
+}
+/* ==================== Marketing Css End =========================*/

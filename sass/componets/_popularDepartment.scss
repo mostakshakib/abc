@@ -1,0 +1,143 @@
+/* =================== Department Css Start ======================= */
+#department {
+    padding: 60px 0;
+
+    .department_content {
+
+        /* Department Menu */
+        .department_menu {
+            ul {
+                justify-content: center;
+
+                li {
+                    button {
+                        padding: 10px 15px;
+                        border: 1px solid #ccc;
+                        @include text(14px, 500, #333);
+                        margin: 5px 10px;
+                        text-transform: uppercase;
+                    }
+
+                    button.active {
+                        background: transparent;
+                        border-color: $hover;
+                        color: $hover;
+                    }
+                }
+            }
+        }
+
+        /* Department Item */
+        .department_item {
+            ul {
+                flex-wrap: wrap;
+                >li {
+                    width: 17.89%;
+                    text-align: center;
+                    margin: 5px 12px;
+
+                    .d-item_img {
+                        position: relative;
+                        img.d_item_hover_img {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        .ovrly{
+                            position: absolute;
+                            top: 5px;
+                            right: 0;
+                            opacity: 0;
+                            @include transition();
+                            >ul{
+                                >li{
+                                    >a{
+                                        width: 30px;
+                                        height: 30px;
+                                        border-radius: 50%;
+                                        background: #fff;
+                                        color: #666;
+                                        text-align: center;
+                                        line-height: 30px;
+                                        font-size: 12px;
+                                        @include transition();
+                                        &:hover {
+                                            background-color: $hover;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        span{
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            width: 50px;
+                            height: 25px;
+                            text-align: center;
+                            line-height: 25px;
+                            background: $offer;
+                            color: #fff;
+                            border-radius: 5px;
+                            font-size: 10px;
+                            font-weight: 600;
+                        }
+
+                        &:hover {
+                            img.d_item_hover_img {
+                                display: block;
+                            }
+                            .ovrly{
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .d-item_text {
+                        >a {
+                            @include text(12px, 500, #333);
+                            padding-top: 10px;
+
+                            &:hover {
+                                color: $hover;
+                            }
+                        }
+                        .review {
+                            a {
+                              color: $offer;
+                              font-size: 13px;
+                            }
+                
+                            a:nth-child(4) {
+                              color: #ccc;
+                            }
+                            a:nth-child(5) {
+                              color: #ccc;
+                            }
+                            a:last-child {
+                              color: #666;
+                              font-size: 13px;
+                              &:hover {
+                                color: $hover;
+                            }
+                            }
+                          }
+                          p{
+                              @include text(18px, 600, #333);
+                              del{
+                                  font-size: 15px;
+                                  color: #666;
+                              }
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* =================== Department Css End ======================= */

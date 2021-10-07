@@ -1,0 +1,52 @@
+/* ========================= Fixed Css Start ======================= */
+/* Blog SideBar Fix */
+.blog_body_right_fix{
+    position: sticky;
+    left: 0;
+    top: 75px;
+    width: 100%;
+    transition: ease .3s;
+    animation: topTobottom .5s;
+}
+/* Shop SideBar Fix */
+.best_selling_collapse_fix{
+    position: sticky;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    transition: ease .3s;
+    animation: topTobottom .5s;
+}
+/* Navigation Menu Fix */
+.fixed_nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 2px 35px rgba(0, 0, 0, 0.1);
+    z-index: 9999999999;
+    animation: topTobottom .5s;
+    
+    .nav_left{
+        .browse_mega_dropdown{
+            border: 1px solid #f1f1f1;
+            >a{
+                background: #fff;
+            }
+            >ul{
+                display: none;
+            }
+            &:hover{
+                >a{
+                    background: #f1f1f1;
+                }
+                >ul{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+/* ========================= Fixed Css End ======================= */
